@@ -1104,7 +1104,8 @@ public class CalculatedStyle {
     }
 
     public boolean isCollapseBorders() {
-        return isIdent(CSSName.BORDER_COLLAPSE, IdentValue.COLLAPSE) && ! isPaginateTable();
+        // Why border collapse couldn't be use with paginate table ?
+        return isIdent(CSSName.BORDER_COLLAPSE, IdentValue.COLLAPSE) /*&& ! isPaginateTable()*/;
     }
 
     public int getBorderHSpacing(CssContext c) {
